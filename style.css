@@ -1,0 +1,596 @@
+
+---------------------------------------------------------------
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Enable Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+header {
+  width: 100%;
+  height: 5%;
+  background: #303030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 15px 10%;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  position: fixed;
+  right: 10px;
+  top: 0%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links ul{
+  text-align: right;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cce2ff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 5%; /* Makes it circular */
+  margin-left: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.insta-btn:hover .nav-logo {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  opacity: 0.8;
+}
+
+/* Sections */
+section {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Different Backgrounds for Each Section */
+#home { background: #cce2ff; color: white; }
+#about { background: #ffffff; }
+#education { background: #cce2ff; }
+#experience { background: #ffffff; }
+#skills { background: #cce2ff; }
+#contact { background: #ffffff; color: #003674; }
+
+
+------------------------------------------------------------
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Intro Section */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 800vh;
+  background-color: #cce2ff; /* Dark background */
+  color: rgb(255, 255, 255);
+  padding: 50px 10%;
+}
+
+/* Flexbox Layout */
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Left Side - Text */
+.intro-text {
+  max-width: 50%;
+}
+
+.intro-text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 30px;
+  color: #003674;
+  margin-bottom: 20px;
+}
+
+/* Highlight Name */
+.highlight {
+  color: #003674;
+}
+
+/* Download Button */
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  color: rgb(2, 58, 122);
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #a3aeba;
+}
+
+/* Right Side - Profile Image */
+.intro-image img {
+  width: 500px; /* Adjust size */
+  height: 500px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .intro-text {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .intro-image img {
+      width: 200px;
+      height: 200px;
+  }
+}
+---------------------------------------------------------------
+/* About Me Section */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 800vh;
+  background-color: #cce2ff; /* Dark background */
+  color: rgb(255, 255, 255);
+  padding: 50px 10%;
+}
+
+/* About Me Container */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;  
+}
+
+/* Heading */
+#about h1 {
+  font-size: 50px;
+  margin-bottom: 0%;
+  color: #003674;
+}
+
+/* Description */
+#about p {
+  font-size: 25px;
+  margin-left: 0%;
+  margin-right: 0%;
+  font-weight: bold;
+  color: #333;
+
+}
+
+#about li{
+  font-size: 19px;
+  text-align: left;
+  margin-left: 0%;
+  line-height: 2.1;
+}
+
+/* Slideshow Container */
+#slider {
+  align-items: baseline;
+  margin-top: 0%;
+  height: 50vh;background-color: #ffffff;
+}
+.slider-container {
+  width: 300%;
+  max-width: 800px;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  width: 300%; /* To accommodate all 3 images */
+  animation: slideShow 20s infinite linear;
+}
+
+/* Slider Images */
+.slider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Keyframes for Sliding Effect */
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-60%); }
+  66% { transform: translateX(-30%); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider img {
+      height: 200px;
+  }
+}
+-----------------------------------------------------
+/* Education Section */
+#education {
+  background-color: #222;
+    text-align: center;
+    padding: 5% 0px;
+   
+}
+
+#education h1{
+  font-size: 40px;
+  margin-top: 15%;
+  color: #003674;
+}
+
+#education p{
+  font-size: 22px;
+  line-height: 1.6;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: left;
+}
+
+#education li{
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Centering the Heading */
+.education-heading {
+  align-items: center;
+  margin-bottom: 50px;
+  
+}
+
+/* Education Container */
+#edu {
+  margin-top: 0%;
+  height: 50vh;
+  background-color: #cce2ff;
+
+}
+
+.education-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 2-Column Grid */
+.education-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(1, 49, 126, 0.1);
+  width: 45%; /* Two boxes per row */
+  min-width: 250px;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.education-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 6px 15px rgba(2, 80, 168, 0.2);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .education-box {
+      width: 100%; /* One box per row on smaller screens */
+  }
+}
+
+-------------------------------------------------------------------------
+
+/* Experience Section */
+#experience {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 50px 0;
+}
+
+/* Centering the Heading */
+#experience h1 {
+  font-size: 40px;
+  margin-top: 15%;
+  color: #003674;
+}
+
+#experience p{
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: left;
+  
+}
+
+#experience li{
+  font-size: 19px;
+  text-align: left;
+}
+
+.experience-heading {
+  align-items: center;
+  margin-bottom: 50px;
+  
+}
+
+/* Experience Boxes in a Single Line */
+#exp{
+  margin-top: 0%;
+  height: 50vh;
+  background-color: #ffffff;
+}
+.experience-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.experience-box {
+  padding: 20px 80px;
+  border-radius: 20px;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(4, 55, 157);
+  text-align: center;
+  width: 200px;
+}
+
+/* Different Colors for Each Box */
+.red { background: #cce2ff; }   /* Red */
+.blue { background: #ececec; }  /* Blue */
+.green { background: #cce2ff; } /* Green */
+.yellow { background: #ececec; } /* Yellow */
+
+
+
+/* Space sections for smooth scrolling */
+section:not(:first-child) {
+  margin-top: 50px;
+}
+----------------------------------------------------------------------------------
+/* Skills Section */
+#skills {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+/* Skills Heading */
+#skills h1 {
+  font-size: 40px;
+  margin-top: 10%;
+  margin-bottom: 50px;
+}
+
+#skills h2{
+  font-size: 26px;
+  margin-bottom: 0%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+#skills p{
+  font-size: 19px;
+  line-height: 1.6;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  
+}
+
+#skills-heading{
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Skills Container */
+#skill{
+  text-align: center;
+  margin-top: 0%;
+  height: 50vh;
+  background-color: #cce2ff;
+}
+.skills-container {
+  width: 50%;
+  margin: auto;
+}
+
+/* Individual Skill */
+.skill {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Skill Name */
+.skill p {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Progress Fill */
+.progress {
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Skill Progress Percentages */
+.html { width: 90%; background: #f16529; }
+.css { width: 85%; background: #2965f1; }
+.js { width: 75%; background: #f7df1e; }
+.designing { width: 99%; background: #3776ab; }
+
+/* Skill Images */
+#skillimg{
+  align-items: center;
+  background-color: #cce2ff;
+  margin-top: 0%;
+  height: 400px;
+}
+.skill-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.skill-images img {
+  width: 450px; /* Adjust size */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+----------------------------------------------------------------------------------------
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height:100vh;
+}
+
+.contact-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.email-btn {
+  background-color: #cce2ff;
+  color: #a3aeba;
+}
+
+.linkedin-btn {
+  background-color: #cce2ff;
+  color: #a3aeba;
+}
+
+.contact-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.contact-btn:hover {
+  opacity: 0.8;
+}
